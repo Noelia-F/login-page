@@ -17,7 +17,7 @@ main::before {
   height: 100%;  
   opacity: .4; 
   z-index: -1;
-  background-image: url('../../public//new_year_s_card_26_b.jpg');
+  background-image: url('../../public/new_year_s_card_26_b.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -29,15 +29,10 @@ main::before {
   max-width: 450px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-}
-
-.section--title {
   margin-top: auto;
 }
 
 .section--form {
-  height: 100%;
   padding: var(--space-sm);
 }
 
@@ -49,7 +44,6 @@ main::before {
  /** Form **/
 .form-wrapper {
   display: flex;
-  height: 100%;
   flex-direction: column;
   padding: var(--space-sm);
   margin-top: var(--space-sm);
@@ -72,6 +66,8 @@ main::before {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-secondary);
 }
 
 .form__field {
@@ -116,10 +112,64 @@ main::before {
 
 .button {
   border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.button:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.button--main {
   border-radius: var(--radius);
   background-color: var(--color-accent);
   color: var(--color-contrast);
   font-weight: 700;
   font-size: var(--font-lg);
   padding: var(--space-xs);
+}
+
+/** Login part **/
+.form-wrapper__login-app {
+  padding-top: var(--space-md);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.login-app__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-md);
+  list-style: none;
+}
+
+.button--app {
+  background-color: var(--color-contrast);
+  height: 45px;
+  width: 45px;
+  border-radius: var(--radius);
+}
+
+.button--app img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+
+/** Forgot form part **/
+.form-wrapper__forgot {
+  padding-top: var(--space-md);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-xs)
 }

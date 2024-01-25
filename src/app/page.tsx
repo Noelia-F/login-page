@@ -26,14 +26,14 @@ export default function Home() {
               </label>
               <a className="link" href="#">Forgot your password?</a>
             </div>
-            <button className="button" type="submit">Login</button>
+            <button className="button button--main" type="submit">Login</button>
           </form>
           <section className="form-wrapper__login-app">
             <p>Or login with...</p>
-            <ul>
-              <li>Google</li>
-              <li>Twitter</li>
-              <li>Facebook</li>
+            <ul className="login-app__list">
+              <li><button className="button button--app" aria-label="login with google"><img alt="google-icon" src="/icon_google.svg"/></button></li>
+              <li><button className="button button--app" aria-label="login with twitter"><img alt="twitter-icon" src="/icon_twitter.svg"/></button></li>
+              <li><button className="button button--app" aria-label="login with facebook"><img alt="facebook-icon" src="/icon_fb.svg"/></button></li>
             </ul>
           </section>
           <section className="form-wrapper__forgot">
