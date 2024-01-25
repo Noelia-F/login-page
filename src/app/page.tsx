@@ -14,9 +14,15 @@ export default function Home() {
           </section>
           <form className="form">
             <div className="form__field">
+              <div className="icon__wrapper">
+                <img className="icon" alt="user-icon" src="/icon_user.svg"/>
+              </div>
               <input type="text" placeholder="Userame..." />
             </div>
             <div className="form__field">
+              <div className="icon__wrapper">
+                <img className="icon" alt="lock-icon" src="/icon_lock.svg"/>
+              </div>
               <input type="text" placeholder="Password..." />
             </div>
             <div className="form__remember">
