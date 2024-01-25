@@ -1,10 +1,10 @@
 .main {
   padding: var(--space-xl);
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   gap: var(--space-md);
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
 }
 
@@ -22,6 +22,20 @@ main::before {
   background-size: cover;
 }
 
+/** Logo **/
+.logo {
+  font-family: var(--font-title);
+  font-size: var(--font-lg);
+  display: flex;
+  gap: var(--space-xs);
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: var(--space-xs);
+  border-radius: var(--radius);
+  width: fit-content;
+  position: static;
+}
+
  /** Section **/
 .section {
   flex: 1;
@@ -29,7 +43,11 @@ main::before {
   max-width: 450px;
   display: flex;
   flex-direction: column;
-  margin-top: auto;
+  justify-content: flex-end;
+}
+
+.section--title {
+  gap: var(--space-lg);
 }
 
 .section--form {
@@ -186,4 +204,16 @@ main::before {
   display: flex;
   justify-content: space-between;
   gap: var(--space-xs)
+}
+
+@media (min-width: 720px) {
+  .main {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .logo {
+    position: absolute;
+    top: var(--space-lg);
+    left: var(--space-lg);
+  }
 }

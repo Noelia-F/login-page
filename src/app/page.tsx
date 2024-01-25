@@ -5,6 +5,10 @@ export default function Home() {
   return (
     <main className="main">
       <section className="section section--title">
+          <div className="logo">
+            <img className="icon" alt="paper-plane-logo" src="/icon_logo.svg"/>
+            <p>LoveTravel</p>
+          </div>
           <h1 className="title">Where the dreams come true</h1>
       </section>
       <section className="section section--form">
