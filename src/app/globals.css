@@ -43,8 +43,8 @@ body {
 }
 
 body {
-  color: var(--secondary);
-  background-color: var(--contrast);
+  color: var(--color-secondary);
+  background-color: var(--color-contrast);
   font-family: var(--font-principal);
   font-size: var(--font-md);
 }
